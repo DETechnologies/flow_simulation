@@ -1,0 +1,10 @@
+version: 3.1
+##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
+---
+
+cells:
+   general:               [mach, density, pressure, temperature, velocity]
+   combustion:            equiv_ratio
+   turbulence:            [eps, tke, turb_viscosity]
+   species_molefrac:      [H2, O2]
+

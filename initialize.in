@@ -1,0 +1,104 @@
+version: 3.1
+##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
+---
+
+-  region:
+      region_id:          0                                           # Region ID.
+      vel_init:           [0, 300, 0]                                 # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          234000                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         O2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          1                                           # Region ID.
+      vel_init:           [0, 300, 0]                                 # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          234000                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         H2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          2                                           # Region ID.
+      vel_init:           [0, 0, 0]                                   # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          101325                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         O2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          3                                           # Region ID.
+      vel_init:           [0, 0, 0]                                   # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          101325                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         H2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          4                                           # Region ID.
+      vel_init:           [0, 0, 0]                                   # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          101325                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         O2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          5                                           # Region ID.
+      vel_init:           [0, 0, 0]                                   # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          101325                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         H2:              1
+      passive_init:
+         {}
+-  region:
+      region_id:          6                                           # Region ID.
+      vel_init:           [0, 0, 0]                                   # Initial velocity in the region (m/s).
+      temp_init:          300                                         # Initial temperature in the region (K).
+      pres_init:          101325                                      # Initial absolute pressure in the region (Pa).
+      turbulence_init:
+         approach:        value
+         value:
+            tke:          1                                           # Initial turbulent kinetic energy in the region (m^2/s^2).
+            eps:          100                                         # Initial tke dissipation rate in the region (m^2/s^3).
+      species_init:
+         N2:              0.767
+         O2:              0.233
+      passive_init:
+         {}
+

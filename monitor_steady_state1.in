@@ -1,0 +1,21 @@
+version: 3.1
+##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
+---
+
+min_cycles_steady:        500                                         # Minimum number of cycles for steady-state calculations.
+monitor_units:            SECONDS
+variables:
+   -  variable:
+         variable_name:   MASS_FLOW_RATE@BOUND_ID_10                  # User-defined variable name, used for output purpose only.
+         filename:        mass_avg_flow.out                           # Name of the .out file which contains the specified variable.
+         stream_id:       ALL
+         column_num:      NOT_USED                                    # Column number in the .out file that contains the data for the specified variable.
+         monitor_delay:   0.001                                       # Number of cycles to skip before starting the steady-state monitor.
+         sample_size:     0.0005                                      # Number of samples used to determine if the specified variable has reached steady state.
+         duration_size:   0.0001                                      # The minimum time (or pseudo-time) over which to determine if the specified variable has reached steady state.
+         tol_type:        relative                                    # Type of tolerance specified; relative/absolute.
+         tol_avg:         0.01                                        # Tolerance on difference between the means computed from monitored samples.
+         max_std:         0.01                                        # Maximum allowed standard deviation in monitored samples.
+         check_periodicity_flag: 0                                    # Check if this variable shows periodic behavior; 1:ON, 0:OFF.
+         tol_std:         0.001                                       # Tolerance on difference between standard deviations computed from monitored samples.
+

@@ -1,0 +1,13 @@
+version: 3.1
+##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
+---
+
+-  gridscale:
+      time:               AUTO                                        # Grid scale time (or AUTO).
+      value:              -1                                          # Grid scale value.
+      monitor_filename:   monitor_steady_state1.in                    # Monitor file name.
+-  gridscale:
+      time:               AUTO                                        # Grid scale time (or AUTO).
+      value:              0                                           # Grid scale value.
+      monitor_filename:   monitor_steady_state1.in                    # Monitor file name.
+

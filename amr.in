@@ -1,0 +1,20 @@
+version: 3.1
+##!Exported by CONVERGE Studio v3.1 Nov 17 2023 11:37:36
+---
+
+amr_settings:
+   cycle_steady:          10                                          # Number of cycles between AMR calculations.
+   max_cells:             1500000                                     # Maximum number of cells in the entire domain.
+   min_cells:             1                                           # Minimum number of cells in the entire domain.
+   embed_frequency:       1                                           # Specify number of cycles/iterations between embed events.
+   release_frequency:     10                                          # Specify number of cycles/iterations between release events.
+amr_groups:
+   -  amr_group:
+         amr_regions:     [2, 3, 6]                                   # Active AMR region.
+amr_bounds:
+   []
+amr_yplus_restrict:
+   []
+amr_proximity:
+   []
+
