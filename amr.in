@@ -4,13 +4,37 @@ version: 3.1
 
 amr_settings:
    cycle_steady:          10                                          # Number of cycles between AMR calculations.
-   max_cells:             1500000                                     # Maximum number of cells in the entire domain.
+   max_cells:             1000000                                     # Maximum number of cells in the entire domain.
    min_cells:             1                                           # Minimum number of cells in the entire domain.
    embed_frequency:       1                                           # Specify number of cycles/iterations between embed events.
    release_frequency:     10                                          # Specify number of cycles/iterations between release events.
 amr_groups:
    -  amr_group:
          amr_regions:     [2, 3, 6]                                   # Active AMR region.
+         amr_pressure:
+            active:       1                                           # Enable AMR based on pressure conditions.
+            embed_scale:  3                                           # Maximum embedding level for pressure.
+            sgs_embed:    1100                                        # Minimum pressure sub-grid value above which a cell will be embedded.
+            temporal_type: PERMANENT                                  # Timing control type.
+            amr_type:     sgs
+   -  amr_group:
+         amr_regions:     6                                           # Active AMR region.
+         amr_species:
+            species_active: 1                                         # Enable AMR based on species conditions.
+            default_embed_scale: 3                                    # Maximum embedding level for species.
+            species_list:
+               -  species:
+                     active: 1
+                     name: O2                                         # Species name.
+                     sgs_embed: 0.01                                  # Minimum sub-grid value of species mass fraction that will trigger AMR.
+                     temporal_type: PERMANENT                         # Temporal type and cyclic period.
+                     amr_type: sgs                                    # Select AMR type.
+               -  species:
+                     active: 1
+                     name: H2                                         # Species name.
+                     sgs_embed: 0.01                                  # Minimum sub-grid value of species mass fraction that will trigger AMR.
+                     temporal_type: PERMANENT                         # Temporal type and cyclic period.
+                     amr_type: sgs                                    # Select AMR type.
 amr_bounds:
    []
 amr_yplus_restrict:

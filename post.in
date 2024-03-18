@@ -3,8 +3,8 @@ version: 3.1
 ---
 
 cells:
-   general:               [mach, density, pressure, temperature, velocity]
+   general:               [mach, density, mass, pressure, temperature, velocity]
    combustion:            equiv_ratio
-   turbulence:            [eps, tke, turb_viscosity]
+   turbulence:            turb_viscosity
    species_molefrac:      [H2, O2]
 

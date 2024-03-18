@@ -65,7 +65,7 @@ transport:
       itmin:              2                                           # Minimum number of solver iterations.
       itmax:              300                                         # Maximum number of solver iterations.
       omega:              1.1                                         # Under/over-relaxation used in solving pressure equation.
-      preconditioner:     SOR                                         # Preconditioner used in solving the equation.
+      preconditioner:     None                                        # Preconditioner used in solving the equation.
    density:
       solver_type:        SOR                                         # Linear solver method - SOR/HYPRE_BICGSTAB/CONVERGE_BICGSTAB.
       tol:                0.0001                                      # Convergence tolerance for the density transport equation.

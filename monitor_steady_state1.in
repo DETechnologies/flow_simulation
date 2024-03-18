@@ -10,7 +10,7 @@ variables:
          filename:        mass_avg_flow.out                           # Name of the .out file which contains the specified variable.
          stream_id:       ALL
          column_num:      NOT_USED                                    # Column number in the .out file that contains the data for the specified variable.
-         monitor_delay:   0.001                                       # Number of cycles to skip before starting the steady-state monitor.
+         monitor_delay:   0.0005                                      # Number of cycles to skip before starting the steady-state monitor.
          sample_size:     0.0005                                      # Number of samples used to determine if the specified variable has reached steady state.
          duration_size:   0.0001                                      # The minimum time (or pseudo-time) over which to determine if the specified variable has reached steady state.
          tol_type:        relative                                    # Type of tolerance specified; relative/absolute.

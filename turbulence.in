@@ -83,12 +83,12 @@ des_models:
 les_models:
    les_rpr_sgs_ke:        1
    les_c_sgs_ke:          2                                           # LES sub-grid estimate constant. Typically 2.0.
-   les_c_sgs_ke_visc:     0.05                                        # LES Viscosity coefficient.
-   les_c_sgs_eps:         2                                           # LES dissipation constant. Typically 1.0.
+   les_c_sgs_ke_visc:     0.5                                         # LES Viscosity coefficient.
+   les_c_sgs_eps:         1                                           # LES dissipation constant. Typically 1.0.
    les_c_wale:            0.325
    les_wall_model:        1                                           # LES wall model: 0=standard law of the wall, 1=Werner and Wengle (recommended).
 wall_modeling:
-   wall_dist_flag:        0                                           # Wall distance calculation scheme: 0=use 0.5 times the cell size; 1=use 0.3 times the cell size.
+   wall_dist_flag:        1                                           # Wall distance calculation scheme: 0=use 0.5 times the cell size; 1=use 0.3 times the cell size.
    near_wall_treatment:   STANDARD                                    # Options vary depending on turbulence model used. Export from CONVERGE Studio or refer to documentation for details.
    heat_model:            0                                           # Wall heat transfer model: 0=O'Rourke , 1=Han and Reitz, 2=Angelberger, 3=GruMo-UniMORE, 4=Jayatilleke.
    law_kappa:             0.42                                        # Von Karman's constant.

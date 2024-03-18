@@ -13,22 +13,22 @@ stream_list:
          region_list:
             -  region:
                   id:     0
-                  name:   O2 Inflow
-            -  region:
-                  id:     1
                   name:   H2 Inflow
             -  region:
-                  id:     2
-                  name:   O2 Plenum
+                  id:     1
+                  name:   O2 Inflow
             -  region:
-                  id:     3
+                  id:     2
                   name:   H2 Plenum
             -  region:
+                  id:     3
+                  name:   O2 Plenum
+            -  region:
                   id:     4
-                  name:   O2 Injector
+                  name:   H2 Injector
             -  region:
                   id:     5
-                  name:   H2 Injector
+                  name:   O2 Injector
             -  region:
                   id:     6
                   name:   Combustion Chamber

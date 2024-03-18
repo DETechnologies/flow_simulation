@@ -6,21 +6,21 @@ boundary_conditions:
    -  boundary:
          id:              1                                           # Boundary ID. Default boundary ID is 0.
          type:            INFLOW                                      # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            O2 Inlet
+         name:            H2 Inlet
          region:          0                                           # Region ID. Default region ID is -1.
          velocity:
-            type:         Neumann                                     # Options: Law of wall, Slip, No-slip, Specified Value (DI), Zero normal gradient (NE), Mass flow, Pump, GT-SUITE.
-            value:        [0, 0, 0]                                   # Directional velocity vector components (or USER, AUTO_GENERATE (piston motion), MOTION_CONFIG, profile name).
+            type:         Mass_flow                                   # Options: Law of wall, Slip, No-slip, Specified Value (DI), Zero normal gradient (NE), Mass flow, Pump, GT-SUITE.
+            value:        0.033                                       # Directional velocity vector components (or USER, AUTO_GENERATE (piston motion), MOTION_CONFIG, profile name).
          pressure:
-            type:         Dirichlet_total                             # Pressure type: Neumann, Dirichlet, Dirichlet_total (for INFLOW), Transonic (for OUTFLOW).
-            value:        234000                                      # Pressure value.
+            type:         Dirichlet                                   # Pressure type: Neumann, Dirichlet, Dirichlet_total (for INFLOW), Transonic (for OUTFLOW).
+            value:        400000                                      # Pressure value.
          temperature:
             type:         Dirichlet                                   # Options: Law of wall, Specified Value (DI), Zero normal gradient (NE).
             value:        300                                         # Temperature value.
          species:
             type:         Dirichlet                                   # Species type: Zero normal gradient (NE), Specified Value (DI).
             value:
-               O2:        1
+               H2:        1
          passive:
             type:         Dirichlet                                   # Passive type: Zero normal gradient (NE), Specified Value (DI).
             value:
@@ -35,7 +35,7 @@ boundary_conditions:
    -  boundary:
          id:              2                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            O2 Inlet Wall
+         name:            H2 Inlet Wall
          region:          0                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
@@ -63,21 +63,21 @@ boundary_conditions:
    -  boundary:
          id:              3                                           # Boundary ID. Default boundary ID is 0.
          type:            INFLOW                                      # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            H2 Inlet
+         name:            O2 Inlet
          region:          1                                           # Region ID. Default region ID is -1.
          velocity:
-            type:         Neumann                                     # Options: Law of wall, Slip, No-slip, Specified Value (DI), Zero normal gradient (NE), Mass flow, Pump, GT-SUITE.
-            value:        [0, 0, 0]                                   # Directional velocity vector components (or USER, AUTO_GENERATE (piston motion), MOTION_CONFIG, profile name).
+            type:         Mass_flow                                   # Options: Law of wall, Slip, No-slip, Specified Value (DI), Zero normal gradient (NE), Mass flow, Pump, GT-SUITE.
+            value:        0.267                                       # Directional velocity vector components (or USER, AUTO_GENERATE (piston motion), MOTION_CONFIG, profile name).
          pressure:
-            type:         Dirichlet_total                             # Pressure type: Neumann, Dirichlet, Dirichlet_total (for INFLOW), Transonic (for OUTFLOW).
-            value:        234000                                      # Pressure value.
+            type:         Dirichlet                                   # Pressure type: Neumann, Dirichlet, Dirichlet_total (for INFLOW), Transonic (for OUTFLOW).
+            value:        400000                                      # Pressure value.
          temperature:
             type:         Dirichlet                                   # Options: Law of wall, Specified Value (DI), Zero normal gradient (NE).
             value:        300                                         # Temperature value.
          species:
             type:         Dirichlet                                   # Species type: Zero normal gradient (NE), Specified Value (DI).
             value:
-               H2:        1
+               O2:        1
          passive:
             type:         Dirichlet                                   # Passive type: Zero normal gradient (NE), Specified Value (DI).
             value:
@@ -92,7 +92,7 @@ boundary_conditions:
    -  boundary:
          id:              4                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            H2 Inlet Wall
+         name:            O2 Inlet Wall
          region:          1                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
@@ -120,7 +120,7 @@ boundary_conditions:
    -  boundary:
          id:              5                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            O2 Plenum Wall
+         name:            H2 Plenum Wall
          region:          2                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
@@ -148,7 +148,7 @@ boundary_conditions:
    -  boundary:
          id:              6                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            H2 Plenum Wall
+         name:            O2 Plenum Wall
          region:          3                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
@@ -176,7 +176,7 @@ boundary_conditions:
    -  boundary:
          id:              7                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            H2 Injector Wall
+         name:            O2 Injector Wall
          region:          5                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
@@ -204,7 +204,7 @@ boundary_conditions:
    -  boundary:
          id:              8                                           # Boundary ID. Default boundary ID is 0.
          type:            WALL                                        # Options: WALL, INFLOW, OUTFLOW, PERIODIC, SYMMETRY, TWO_D, GT-SUITE, INTERFACE, FLOW_THROUGH.
-         name:            O2 Injector Wall
+         name:            H2 Injector Wall
          region:          4                                           # Region ID. Default region ID is -1.
          motion:          STATIONARY
          geometry_motion: FIXED
